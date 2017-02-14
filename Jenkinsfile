@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm --version'
-		sh 'java -version'
+		sh '/usr/bin/java -version'
                 sh 'echo "Hello World"'
             }
         }
