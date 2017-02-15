@@ -1,11 +1,17 @@
 pipeline {
-    agent { docker 'node:6.3' }
+    agent any
+    
     stages {
-        stage('build') {
-            steps {
-                sh 'npm --version'
-		sh '/usr/bin/java -version'
-                sh 'echo "Hello World"'
+        stage('Build') { 
+            steps { 
+                echo 'Hello World'
+                build 'Helloworld'
+            }
+        }
+        stage('Build2') {
+            steps { 
+                echo 'Hello World2'
+                build 'Helloworld2'
             }
         }
     }
